@@ -17,7 +17,7 @@ with open("Prediction_model.pkl", "rb") as f:
 # Allow CORS for your frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[["*"]],  # Replace "*" with your frontend URL in production
+    allow_origins=["*"],  # Replace "*" with your frontend URL in production
     allow_credentials=True,
     allow_methods=["POST"],
     allow_headers=["*"],
