@@ -5,6 +5,7 @@ import io
 import uvicorn
 import numpy as np
 import tensorflow as tf
+import pickle
 
 app = FastAPI()
 
