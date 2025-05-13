@@ -8,6 +8,11 @@ import tensorflow as tf
 
 app = FastAPI()
 
+
+with open("Prediction_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+
 # Allow CORS for your frontend
 app.add_middleware(
     CORSMiddleware,
@@ -18,7 +23,7 @@ app.add_middleware(
 )
 
 # Load your model
-model = tf.keras.models.load_model("Prediction_model.pkl")  # Replace with actual model filename
+# model = tf.keras.models.load_model("Prediction_model.pkl")  # Replace with actual model filename
 
 # Class names (replace with your classes)
 class_names = ['Early Blight','Late Blight', 'Healthy']
